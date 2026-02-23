@@ -1,5 +1,5 @@
-# n2nhu-infinite-improbabilty-drive-for-universal-game-engine
-n2nhu-infinite-improbabilty-drive-for-universal-game-engine
+# n2nhu-infinite-improbability-drive-for-universal-game-engine
+n2nhu-infinite-improbability-drive-for-universal-game-engine
 
 NO PATENTS POSSIBLE
 
