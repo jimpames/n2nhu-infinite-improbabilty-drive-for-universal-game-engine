@@ -1,6 +1,9 @@
 # n2nhu-infinite-improbabilty-drive-for-universal-game-engine
 n2nhu-infinite-improbabilty-drive-for-universal-game-engine
 
+main game engine:
+https://github.com/jimpames/N2NHU-labs-universal-game-engine
+
 22 feb 2026
 
 N2NHU Universal Game Engine Infinite Improbability Drive v0.3 beta
