@@ -5,6 +5,8 @@ n2nhu-infinite-improbabilty-drive-for-universal-game-engine
 
 N2NHU Universal Game Engine Infinite Improbability Drive v0.3 beta
 
+VIDEO DEMO: https://youtu.be/YmiGD3yX81g
+
 Status:
 - incomplete
 - bugs
