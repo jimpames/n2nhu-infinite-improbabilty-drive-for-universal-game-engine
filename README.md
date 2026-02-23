@@ -3,7 +3,7 @@ n2nhu-infinite-improbabilty-drive-for-universal-game-engine
 
 NO PATENTS POSSIBLE
 
-https://github.com/jimpames/n2nhu-infinite-improbabilty-drive-for-universal-game-engine/blob/main/n2nhu_wki_architecture_paper.pdf
+https://github.com/jimpames/n2nhu-infinite-improbability-drive-for-universal-game-engine/blob/main/n2nhu_wki_architecture_paper.pdf
 
 
 main game engine:
