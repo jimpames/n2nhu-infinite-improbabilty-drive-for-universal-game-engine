@@ -30,7 +30,7 @@ Use python see example below
 Theory
 
 Uses GPT4ALL local in API mode on windows to generate entire world based 
-on user suppled world name at creation time.
+on user supplied world name at creation time.
 
 Example:
 
