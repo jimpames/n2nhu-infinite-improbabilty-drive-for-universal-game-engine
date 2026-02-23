@@ -34,58 +34,58 @@ on user supplied world name at creation time.
 
 Example:
 
-(venv) C:\Users\jimpames\Desktop\myzork\generator> python create_world.py "THE BRADY BUNCH" --rooms 10 --sprites 8 --objects 12
+(venv) C:\Users\jimpames\Desktop\myzork\generator> python create_world.py "gilligans island" --rooms 10 --sprites 8 --objects 12
 
 ============================================================
   N2NHU UNIVERSAL GAME ENGINE
   INFINITE IMPROBABILITY DRIVE
   N2NHU Labs for Applied Artificial Intelligence
 ============================================================
-  World:   THE BRADY BUNCH
+  World:   gilligans island
 ============================================================
 
 
-  Interviewing LLM about: 'THE BRADY BUNCH'
-   Interview T1: Describe 'THE BRADY BUNCH'...
-   Interview T1: I'm familiar with this one!
+  Interviewing LLM about: 'gilligans island'
+   Interview T1: Describe 'gilligans island'...
+   Interview T1: I'm familiar with Gilligan's Island!
 
-The Brady Bunch is a sitcom (situation comedy) that...
+Gilligan's Island is a classic American si...
    Interview T2: Extracting structured facts...
-   Interview T2: genre='SITCOM' setting='Suburban home' chars=['Mike', 'Carol', 'Brady kids (first 5)']
+   Interview T2: genre='SITCOM' setting='DESERTED ISLAND' chars=['Gilligan', 'The Professor', 'Mary Ann']
    Interview T3: Validating facts...
    Interview T3: Ambiguous — proceeding with caution
-  ✅ World context: THE BRADY BUNCH (I'm familiar with this one!
+  ✅ World context: gilligans island (I'm familiar with Gilligan's Island!
 
-The Brady Bunch is a sitcom (situa
+Gilligan's Island is a c
      Confidence: medium  Method: llm_interview
 
-  Classifying theme for: 'THE BRADY BUNCH'
-   Theme: keyword hit 'DOMESTIC' — challenging with LLM...
-   Theme: LLM confirmed keyword: domestic
-  ✅ Theme: domestic  (method: keyword_confirmed)
+  Classifying theme for: 'gilligans island'
+   Theme: keyword hit 'ADVENTURE' — challenging with LLM...
+   Theme: LLM overrode keyword: adventure -> sitcom
+  ✅ Theme: sitcom  (method: keyword_challenged)
 
-  Generating room names for: 'THE BRADY BUNCH'
-   Room: Using interview context — setting='SUBURBAN HOME'
-   Room Step 2: Naming 10 rooms for THE BRADY BUNCH (SUBURBAN HOME)...
-   Room Step 2: Got 10 names -> Living Room, Front Door, Mike's Office, Carol's Kitchen...
-  ✅ Rooms: Living Room, Front Door, Mike's Office, Carol's Kitchen, Marcia's Bedroom...
-  ✅ Setting: SUBURBAN HOME  (method: interview)
+  Generating room names for: 'gilligans island'
+   Room: Using interview context — setting='DESERTED ISLAND'
+   Room Step 2: Naming 10 rooms for gilligans island (DESERTED ISLAND)...
+   Room Step 2: Got 10 names -> Beach Hut, Professor's Lab, Mary Ann's Cabin, Mr. Howell's Tent...
+  ✅ Rooms: Beach Hut, Professor's Lab, Mary Ann's Cabin, Mr. Howell's Tent, Gilligan's Shack...
+  ✅ Setting: DESERTED ISLAND  (method: interview)
 
 ────────────────────────────────────────────────────────────
   STEP 1: GENERATE WORLD STRUCTURE
 ────────────────────────────────────────────────────────────
-  ✅ SD suffix: theme default (domestic)
-  ✅ Theme:    domestic
+  ✅ SD suffix: overridden by setting 'DESERTED ISLAND'
+  ✅ Theme:    sitcom
   ✅ Rooms:    10
   ✅ Physics:  theme defaults
   ✅ Files:    6 INI files written
-  ✅ Output:   ./the_brady_bunch_world
+  ✅ Output:   ./gilligans_island_world
 
 ────────────────────────────────────────────────────────────
   STEP 2: ENRICH ROOM DESCRIPTIONS (Llama 3)
 ────────────────────────────────────────────────────────────
   Active provider: GPT4All (Llama 3 8B Instruct)
-  [█████████████████████████] 100%  Alice's Nook
+  [█████████████████████████] 100%  Coconut Cove
   [█████████████████████████] 100%  Complete
   ✅ 10 room descriptions enriched
   ✅ Provider: GPT4All (Llama 3 8B Instruct)
@@ -93,47 +93,48 @@ The Brady Bunch is a sitcom (situa
 ────────────────────────────────────────────────────────────
   STEP 3: PRE-GENERATE ROOM IMAGES (Stable Diffusion)
 ────────────────────────────────────────────────────────────
-  [█████████████████████████] 100%  Alice's Nook
+  [█████████████████████████] 100%  Coconut Cove
   [█████████████████████████] 100%  Complete
   ✅ 10 images pre-generated
-  ✅ Saved to: ./the_brady_bunch_world\images
+  ✅ Saved to: ./gilligans_island_world\images
   ✅ image_mode = static written to stablediffusion.ini
 
 ────────────────────────────────────────────────────────────
   STEP 4: ENRICH OBJECTS / CHARACTERS / TRANSFORMATIONS (Llama 3)
 ────────────────────────────────────────────────────────────
-   Enricher: Object context from interview: Home furnishings...
-   Enricher: Characters from interview: Mike, Carol, Brady kids (first 5)...
+   Enricher: Object context from interview: BOAT...
+   Enricher: Characters from interview: Gilligan, The Professor, Mary Ann, Mr. Howell, Mrs. Lovey...
   [░░░░░░░░░░░░░░░░░░░░░░░░░]   0%  Generating...
 ──────────────────────────────────────────────────
-  Objects for THE BRADY BUNCH
+  Objects for gilligans island
 ──────────────────────────────────────────────────
-   Step 0: What kinds of objects exist in 'THE BRADY BUNCH'?
-   Step 0: Context -> Music instruments, school supplies, sports equipment, kitchen utensils, fashion ...
-   Step 1: Asking Llama to name 12 objects in THE BRADY BUNCH...
-   Step 1: 11 names -> Ringos drum set, Jans clarinet, Gregs guitar amp, Marcias hair dryer, Bobbys skateboard...
-   Step 2: Building structured data for 11 objects...
-   OK: 10 objects written
+   Step 0: What kinds of objects exist in 'gilligans island'?
+   Step 0: Context -> Tiki torches, coconut shells, fishing nets, island plants, makeshift tools, ship...
+   Step 1: Asking Llama to name 12 objects in gilligans island...
+   Step 1: 9 names -> ROCKING CHAIR, TREASURE CHEST, DESERTED ISLAND MAPS, PROFESSORS BUNDLE, VOLLEYBALL NET...
+   Step 2: Building structured data for 9 objects...
+   OK: 9 objects written
   [█████████████████████████] 100%  Complete
   [░░░░░░░░░░░░░░░░░░░░░░░░░]   0%  Generating...
 ──────────────────────────────────────────────────
-  Characters for THE BRADY BUNCH
+  Characters for gilligans island
 ──────────────────────────────────────────────────
-   Step 1: Asking Llama to name 8 characters in THE BRADY BUNCH...
-   Step 1: 8 names -> Mike, Carol, Greg, Marcia, Peter...
-   Step 1b: Verifying 8 characters are real cast members...
-   Step 1b: Removed hallucinated: Alice
-   Step 2: Building structured data for 7 characters...
-   OK: 7 characters written
+   Step 1: Asking Llama to name 8 characters in gilligans island...
+   Step 1: 7 names -> Gilligan, The Professor, Mary Ann, Mr. Howell, Mrs. Lovey...
+   Step 1b: Verifying 7 characters are real cast members...
+   Step 1b: Removed hallucinated: Mrs. Lovey, Thurston
+   Step 1b: Added real cast: Lovey
+   Step 2: Building structured data for 6 characters...
+   OK: 6 characters written
   [█████████████████████████] 100%  Complete
   [░░░░░░░░░░░░░░░░░░░░░░░░░]   0%  Generating...
 ──────────────────────────────────────────────────
-  Transformations for THE BRADY BUNCH
+  Transformations for gilligans island
 ──────────────────────────────────────────────────
    OK: 5 transformations written
   [█████████████████████████] 100%  Complete
-  ✅ 10 objects written
-  ✅ 7 characters written
+  ✅ 9 objects written
+  ✅ 6 characters written
   ✅ 5 transformations written
 
 ────────────────────────────────────────────────────────────
@@ -142,22 +143,23 @@ The Brady Bunch is a sitcom (situa
   ✅ All cross-references valid — zero broken exits
 
 ============================================================
-  ✅ THE BRADY BUNCH IS READY!
+  ✅ GILLIGANS ISLAND IS READY!
 ============================================================
   Rooms:          10
-  Objects:        10
-  Characters:     7
+  Objects:        9
+  Characters:     6
   Transformations:5
   Images:         pre-generated (static)
-  Total time:     3m 20s
-  Output:         C:\Users\jimpames\Desktop\myzork\generator\the_brady_bunch_world
+  Total time:     3m 22s
+  Output:         C:\Users\jimpames\Desktop\myzork\generator\gilligans_island_world
 ============================================================
 
-  Copy ./the_brady_bunch_world/ to your game engine config/ folder.
+  Copy ./gilligans_island_world/ to your game engine config/ folder.
   Launch ZORK_RPG_Server.exe. Your world is ready.
 
 
 (venv) C:\Users\jimpames\Desktop\myzork\generator>
+
 
 
 Inspired by the genius of Douglas Adams 
